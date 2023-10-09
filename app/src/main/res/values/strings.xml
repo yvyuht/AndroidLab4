@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">AndroidLab4</string>
+    <string name="TextView_message">Enter your email address:</string>
+    <string name="EditText_message">Type email here</string>
+    <string name="TextView_message2">Type your password:</string>
+    <string name="Login_message">Login</string>
+    <string name="CallNumber_message">Call Number</string>
+    <string name="ChangePicture_message">Change Picture</string>
+    <string name="TextView">Text View</string>
 </resources>
