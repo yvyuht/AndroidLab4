@@ -75,8 +75,6 @@ public class MainActivity extends AppCompatActivity {
         String emailAddress = prefs.getString("LoginName","");
         emailEditText.setText(emailAddress);
 
-
-
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,10 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
                 startActivity(nextPage);
             }
-
         });
-
-
     }
 
     private  void saveEmailAddress(String emailAddress) {

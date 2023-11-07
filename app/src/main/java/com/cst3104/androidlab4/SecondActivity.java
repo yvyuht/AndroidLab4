@@ -35,7 +35,6 @@ public class SecondActivity extends AppCompatActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private ActivityResultLauncher<Intent> cameraResult;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,14 +46,12 @@ public class SecondActivity extends AppCompatActivity {
 
         changePicture.setOnClickListener(view -> dispatchTakePictureIntent());
 
-
         //Check file exists
         File file = new File(getFilesDir(), "Picture.png");
         if (file.exists()) {
             Bitmap loadedBitmap = loadBitmapFromFile(file);
             profileImage.setImageBitmap(loadedBitmap);
         }
-
 
         // welcome email
         Intent fromPrevious = getIntent();
@@ -64,7 +61,6 @@ public class SecondActivity extends AppCompatActivity {
         if (!emailAddress.isEmpty()) {
             userInput.setText("Welcome back " + emailAddress);
         }
-
 
         //make a phone call
         Button makeCall = findViewById(R.id.callNumberbutton);
@@ -76,7 +72,6 @@ public class SecondActivity extends AppCompatActivity {
             String url = "tel:" + phoneNumber;
             Intent i = new Intent(Intent.ACTION_CALL);
             i.setData(Uri.parse(url));
-
 
             if (ContextCompat.checkSelfPermission(getApplicationContext(), CALL_PHONE)
                     == PackageManager.PERMISSION_GRANTED) {
@@ -94,7 +89,6 @@ public class SecondActivity extends AppCompatActivity {
         //load saved phone number
         String phoneNumber = prefs.getString("PhoneNumber", "");
         phoneNumberEditText.setText(phoneNumber);
-
     }
 
     private void dispatchTakePictureIntent() {
